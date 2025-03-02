@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+
+        .bg-primary {
+            background-color: #F4F7FF;
+        }
+
+        .text-color-primary {
+            color: #00303C;
+        }
+
+        .btn {
+            color: white;
+            padding: 10px 20px;
+            background-color: #3752FD;
+        }
+
+        .btn:hover {
+            background-color: #213df6;
+        }
+        .border-bottom{
+            border-bottom: 2px dashed rgba(55, 82, 253, 0.2);
+        }
+    </style>
+
+</head>
+
+<body class="font-poppins bg-primary min-h-[100vh] pt-6">
+    <header>
+        <nav class="container mx-auto p-6 bg-white rounded-2xl flex justify-between items-center">
+
+            <div class="flex items-center w-10">
+                <img src="assets/logo.png" alt="">
+                <h1 class="pl-2 text-3xl font-light text-color-primary">DEV<span class="font-bold">Board</span></h1>
+            </div>
+
+            <div>
+                
+                <div>
+                    <button id="back-btn" class="btn">
+                        Back To Desk
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-5 md:p-0 container mx-auto">
+
+        <div class="flex justify-center p-10">
+            <h1 class="text-3xl text-color-primary font-black">Blogs</h1>
+        </div>
+
+        <div class="space-y-6 pb-10">
+
+
+            <div class="container mx-auto bg-white rounded-2xl">
+
+
+                <div class="text-xl text-color-primary font-black p-6 pb-4 mb-4 border-bottom">
+                    <h1>Question-1: What are the different ways to select an element in the DOM?</h1>
+                </div>
+
+            
+                <div class="opacity-80 p-6 pt-0">
+                    <p>
+                        There are many ways to select an element in the DOM: <br>
+                        getElementById(id) , getElementsByClassName(), getElementsByTagName(),querySelector(),querySelectorAll()
+                        
+                        
+                    </p>
+                </div>
+            </div>
+
+
+           
+            <div class="container mx-auto bg-white rounded-2xl">
+
+                <div class="text-xl text-color-primary font-black p-6 pb-4 mb-4 border-bottom">
+                    <h1>Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                </div>
+
+              
+                <div class="opacity-80 p-6 pt-0">
+                    <p>
+                        Difference between innerHTML, innerText, and textContent: <br>
+                        1. innerHtml = Returns or sets the HTML inside an element (includes tags). <br>
+                        2. innText = Returns or sets only the visible text inside an element. It ignores hidden text. <br>
+                        3. textContent = Returns or sets all text inside an element (including hidden text).
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="container mx-auto bg-white rounded-2xl">
+
+               
+                <div class="text-xl text-color-primary font-black p-6 pb-4 mb-4 border-bottom">
+                    <h1>Question-3: What is event delegation in the DOM?</h1>
+                </div>
+
+               
+                <div class="opacity-80 p-6 pt-0">
+                    <p>
+                        Event Delegation: <br>
+                        Event delegation is a technique where you attach an event listener to a parent element instead of individual child elements. This helps when handling dynamic content.
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+
+
+           
+            <div class="container mx-auto bg-white rounded-2xl">
+
+                
+                <div class="text-xl text-color-primary font-black p-6 pb-4 mb-4 border-bottom">
+                    <h1>Question-4: What is event bubbling in the DOM?</h1>
+                </div>
+
+              
+                <div class="opacity-80 p-6 pt-0">
+                    <p>
+                        Event Bubbling: <br>
+                        Event bubbling is when an event on a child element bubbles up to its parent elements.
+                        <br><br>
+                     Clicking the button will show:
+               1️. "Button clicked!"<br>
+               2️. "Parent clicked!" (because of bubbling)<br>
+
+                To stop bubbling, use event.stopPropagation().
+                    </p>
+                </div>
+            </div>
+
+
+            
+            <div class="container mx-auto bg-white rounded-2xl">
+
+             
+                <div class="text-xl text-color-primary font-black p-6 pb-4 mb-4 border-bottom">
+                    <h1>Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                </div>
+
+               
+                <div class="opacity-80 p-6 pt-0">
+                    <p>
+                        Create, Add and remove elements:
+                        <br> <br>
+                        Create an element:<br>
+
+                    let newElement = document.createElement("p");<br>
+                    newElement.innerText = "Hello World!";
+                        <br>
+                        Add an element to the DOM:<br>
+
+                        document.body.appendChild(newElement);
+                        <br>
+                        Remove an element:<br>
+
+                        newElement.remove();
+                        
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="script3.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>

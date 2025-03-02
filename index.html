@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+
+        .bg-primary {
+            background-color: #F4F7FF;
+        }
+
+        .text-color-primary {
+            color: #00303C;
+        }
+
+        .btn {
+            color: white;
+            padding: 10px 20px;
+            background-color: #3752FD;
+        }
+
+        .btn:hover {
+            background-color: #213df6;
+        }
+        .border-bottom{
+            border-bottom: 2px dashed rgba(55, 82, 253, 0.2);
+        }
+    </style>
+
+</head>
+
+<body class="font-poppins bg-primary min-h-[100vh] pt-6">
+    <header class="px-5 md:p-0">
+        <nav class="container mx-auto p-6 bg-white rounded-2xl flex justify-between items-center">
+
+            <div class="flex items-center">
+                <img class="w-8 md:w-auto" src="assets/logo.png" alt="">
+                <h1 class="pl-2 text-xl md:text-4xl font-light text-color-primary">DEV<span class="font-bold">Board</span></h1>
+            </div>
+
+            <div class="flex gap-4 md:gap-9 items-center">
+
+                <div class="flex gap-4 items-center bg-primary px-4 py-2 rounded-[32px]">
+                    <div>
+                        <img class="w-5 md:w-auto" src="assets/checkbox.png" alt="">
+                    </div>
+                    <h2 id="increment-done" class="text-[2rem] font-bold text-[#1E1E1E]">23</h2>
+                </div>
+
+                <div>
+                    <button id="rgb-btn" class="p-3 rounded-full bg-primary">
+                        <img src="assets/theme-btn.png" alt="">
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="px-5 md:p-0 pb-10 md:pb-16 container mx-auto mt-5 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6 text-color-primary ">
+
+        <div class="md:col-span-2 xl:col-span-3 bg-white rounded-2xl">
+
+            <div class="p-6 space-y-6 xl:space-y-0 xl:flex xl:justify-between xl:gap-6 pb-8 border-bottom">
+                <div class="bg-primary p-8 rounded-xl flex items-center">
+
+                    <div class="mr-5">
+                        <img class="p-5 bg-white rounded-full overflow-visible" src="assets/checkbox.png"
+                            alt="">
+                    </div>
+
+                    <div>
+                        <h1 class="font-medium opacity-80">Task Assigned</h1>
+                        <h1 id="task-counter" class="font-bold text-[2rem]">0</h1>
+                    </div>
+                </div>
+
+
+                <div id="discover-btn"
+                    class="cursor-pointer grow flex items-center py-6 px-10 rounded-xl bg-gradient-to-tr from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
+
+                    <div>
+                        <img src="assets/board.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-white font-medium text-2xl mr[22px]">Discover Something <br>
+                            New Today!
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="bg-primary p-8 rounded-xl flex items-center">
+                    
+                    <div class="mr-5">
+                        <img class="p-5 bg-white rounded-full overflow-visible" src="assets/calender.png"
+                            alt="">
+                    </div>
+
+                    <div>
+                        <h1 class="font-medium text-[22px]"><span id="today">Wed</span><span class="font-bold"> ,</span>
+                        </h1>
+                        <h1 class="font-bold text-[22px]" id="todayDate">March 02 2025</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="task-container" class="p-6 grid lg:grid-cols-2 xl:grid-cols-3 gap-9 pt-8">
+
+
+                
+                <div id="task1" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+                        <span class="py-2 px-4 bg-white rounded-lg">ShopEase</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Fix Mobile Button Issue</h1>
+                        </div>
+                
+                        <div class="bg-white p-4 rounded-lg  text-black">
+                            <p class="line-clamp-2 opacity-50">Make sure the button works correctly on all devices. Fix any problems with alignment and clicking.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                    
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="task2" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+        
+                        <span class="py-2 px-4 bg-white rounded-lg">CloudSync</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Add Dark Mode</h1>
+                        </div>
+                    
+                        <div class="bg-white p-4 rounded-lg  text-black ">
+                            <p class="line-clamp-2 opacity-50">Create a dark mode switch using CSS and JavaScript. Ensure smooth transitions between themes.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                       
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                    
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+        
+                <div id="task3" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+            
+                        <span class="py-2 px-4 bg-white rounded-lg">SwiftPay</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Optimize Home page</h1>
+                        </div>
+                
+                        <div class="bg-white p-4 rounded-lg  text-black ">
+                            <p class="line-clamp-2 opacity-50">Make the homepage load faster by optimizing images and scripts. Improve the design for better user experience.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                    
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+            
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+               
+                <div id="task4" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+                
+                        <span class="py-2 px-4 bg-white rounded-lg">Meta</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Add new emoji 🤲</h1>
+                        </div>
+                    
+                        <div class="bg-white p-4 rounded-lg  text-black ">
+                            <p class="line-clamp-2 opacity-50">Add the 🤲 emoji with proper coding. Ensure it displays correctly on all devices and browsers.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                    
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+        
+                <div id="task5" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+            
+                        <span class="py-2 px-4 bg-white rounded-lg">Google LLC</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Integrate OpenAI API</h1>
+                        </div>
+            
+                        <div class="bg-white p-4 rounded-lg  text-black ">
+                            <p class="line-clamp-2 opacity-50"> Connect to OpenAI’s API for AI-powered features. Make sure authentication and data processing work smoothly.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+            
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+    
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+        
+                <div id="task6" class="p-6 bg-primary rounded-2xl task">
+                    <div class="space-y-4 pb-3 border-bottom">
+
+                
+                        <span class="py-2 px-4 bg-white rounded-lg">Glassdoar</span>
+                        <div class="h-16 2xl:h-auto">
+                            <h1 class="task-title text-2xl font-medium">Improve Job searching</h1>
+                        </div>
+                
+                        <div class="bg-white p-4 rounded-lg  text-black ">
+                            <p class="line-clamp-2 opacity-50">Improve search filters and ranking system. Make job searching easier with a better user interface</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-3">
+                
+                        <div>
+                            <h1 class="text-sm opacity-70">Deadline</h1>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+            
+                        <div>
+                            <button class="btn task-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+          <div class=" bg-white rounded-2xl">
+            <div>
+                <div class="p-6 flex flex-col items-center gap-4 pb-4 border-bottom">
+                    <div class="flex items-center gap-5 justify-center">
+                        <div>
+                            <img src="assets/activity.png" alt="">
+                        </div>
+                        <h1 class="font-medium text-xl">Activity Log</h1>
+                    </div>
+                    <div>
+                        <Button id="clear-history-btn" class="btn">
+                            Clear history
+                        </Button>
+                    </div>
+                </div>
+
+    
+                <div id="history-container" class="p-6 space-y-7">
+                  
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <footer></footer>
+    <script src="script3.js"></script>
+    <script src="script1.js"></script>
+  
+</body>
+
+</html>
